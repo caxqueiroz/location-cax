@@ -21,7 +21,8 @@ public final class Label {
 	private final String locale;
 
 	public Label(String label, String locale) {
-		this.labelName = label;
+		//converts to lowercase. May change this in the future. 
+		this.labelName = label.toLowerCase();
 		this.locale = locale;
 	}
 

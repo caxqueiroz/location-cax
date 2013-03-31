@@ -30,7 +30,7 @@ public class LabelTest extends TestCase {
 		Label lb = new Label("Melbourne", "en_AU");
 		assertNotNull(lb.getLabelName());
 		String label = lb.getLabelName();
-		assertEquals("Melbourne", label);
+		assertEquals("Melbourne".toLowerCase(), label);
 	}
 
 	public void testGetLocale() {

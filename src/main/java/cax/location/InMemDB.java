@@ -21,7 +21,7 @@ public class InMemDB<T> {
 	 * Adds elements to the local database. 
 	 * @param element
 	 */
-	public void addElement(T element) {
+	public synchronized void addElement(T element) {
 		if (element instanceof Location) {
 			data.put(((Location) element).getDefaultLabel().getLabelName(), element);
 			List<Label> labels = ((Location) element).getLabels();
@@ -44,6 +44,7 @@ public class InMemDB<T> {
 	 * @return
 	 */
 	public List<T> search(String search) {
+		search = search.toLowerCase();
 		List<T> filteredData = new ArrayList<T>();
 		if (search.length() > 0) {
 			

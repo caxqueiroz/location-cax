@@ -1,6 +1,6 @@
-# JAX-RS Template Application
+# Location cax
 
-This is a template for a lightweight RESTful API using JAX-RS. The sample code is a call for getting the current time.
+Example cax. 
     
 ## Running the application locally
 
@@ -10,5 +10,5 @@ First build with:
 
 Then run it with:
 
-    $ java -cp target/classes:target/dependency/* com.example.Main
+    $ java -cp target/classes:target/dependency/* cax.location.Main
 

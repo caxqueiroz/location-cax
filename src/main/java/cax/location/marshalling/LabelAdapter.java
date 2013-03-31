@@ -1,8 +1,8 @@
-package marshalling;
+package cax.location.marshalling;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-import com.example.Label;
+import cax.location.Label;
 
 public class LabelAdapter extends XmlAdapter<CustomLabel, Label> {
 

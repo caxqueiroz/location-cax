@@ -1,11 +1,12 @@
 /**
  * 
  */
-package com.example;
+package cax.location;
 
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-import marshalling.LabelAdapter;
+import cax.location.marshalling.LabelAdapter;
+
 
 /**
  * @author cq

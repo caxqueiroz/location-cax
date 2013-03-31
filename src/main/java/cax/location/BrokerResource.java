@@ -1,4 +1,4 @@
-package com.example;
+package cax.location;
 
 import java.util.List;
 

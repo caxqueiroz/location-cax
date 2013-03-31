@@ -1,9 +1,9 @@
-package marshalling;
+package cax.location.marshalling;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-import com.example.Label;
-import com.example.LocationType;
+import cax.location.Label;
+import cax.location.LocationType;
 
 public class LocationTypeAdapter extends
 		XmlAdapter<CustomLocationType, LocationType> {

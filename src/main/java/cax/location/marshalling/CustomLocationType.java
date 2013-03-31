@@ -1,8 +1,8 @@
-package marshalling;
+package cax.location.marshalling;
 
 import java.util.List;
 
-import com.example.Label;
+import cax.location.Label;
 
 public class CustomLocationType {
 

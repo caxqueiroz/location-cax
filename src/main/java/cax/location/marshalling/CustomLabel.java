@@ -1,4 +1,4 @@
-package marshalling;
+package cax.location.marshalling;
 
 
 public class CustomLabel {

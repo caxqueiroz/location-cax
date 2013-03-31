@@ -1,14 +1,15 @@
 /**
  * 
  */
-package com.example;
+package cax.location;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-import marshalling.LocationTypeAdapter;
+import cax.location.marshalling.LocationTypeAdapter;
+
 
 /**
  * @author cq

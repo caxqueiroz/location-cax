@@ -1,6 +1,6 @@
 # Location cax
 
-Example cax. 
+Example cax. Adapted from Heroku java template.
     
 ## Running the application locally
 

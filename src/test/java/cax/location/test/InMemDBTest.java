@@ -170,4 +170,28 @@ public class InMemDBTest extends TestCase {
 		assertEquals(0, filteredLocations.size());
 
 	}
+	@Test
+	public void testFilter8() {
+		String search = "br";
+		InMemDB<Location> locations = new InMemDB<Location>();
+		Location location0 = new Location(new LocationType(1, new Label(
+				"Country", "en_AU")), new Label("Brazil", "en_AU"));
+		location0.addLabel(new Label("Brasil", "pt_BR"));
+		location0.addLabel(new Label("Brésil", "fr_FR"));
+
+		locations.addElement(location0);
+
+		Location location1 = new Location(new LocationType(3, new Label("City",
+				"en_AU")), new Label("Brasilia", "en_AU"));
+		location1.addLabel(new Label("Brasilia", "pt_BR"));
+		location1.addLabel(new Label("Brasilia", "fr_FR"));
+
+		locations.addElement(location1);
+
+		List<Location> filteredLocations = locations.search(search);
+
+		assertNotNull(filteredLocations);
+		assertEquals(2, filteredLocations.size());
+
+	}
 }

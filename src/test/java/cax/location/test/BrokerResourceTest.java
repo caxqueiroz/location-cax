@@ -20,7 +20,7 @@ public class BrokerResourceTest extends JerseyTest {
 	}
 
 	public BrokerResourceTest() throws Exception {
-		super("location.rnd.app.test;location.rnd.app");
+		super("cax.location.test;cax.location");
 
 	}
 

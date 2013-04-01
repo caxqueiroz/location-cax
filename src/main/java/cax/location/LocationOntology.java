@@ -64,6 +64,10 @@ public final class LocationOntology {
 				InMemDB<Location> db = dbentries.getValue();
 				List<Location> locations = db.search(search);
 				locationsFound.addAll(locations);
+				for (Location location : locations) {
+					locationsFound.addAll(location.containsLocations());
+					locationsFound.addAll(location.surroundsLocations());
+				}
 			}
 		}
 
@@ -112,6 +116,8 @@ public final class LocationOntology {
 		location1.addLabel(new Label("Brasília", "pt_BR"));
 		location1.addLabel(new Label("Brasilia", "fr_FR"));
 		
+		location0.addContainsLocation(location1);
+		
 		this.addLocation(location1);
 		
 		Location location2 = new Location(new LocationType(1, new Label(
@@ -125,6 +131,8 @@ public final class LocationOntology {
 				"State", "en_AU")), new Label("Victoria", "en_AU"));
 		location3.addLabel(new Label("Victoria", "pt_BR"));
 		location3.addLabel(new Label("Victoria", "fr_FR"));
+		
+		location2.addContainsLocation(location3);
 		
 		this.addLocation(location3);
 		

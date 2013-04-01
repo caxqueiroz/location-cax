@@ -52,15 +52,8 @@ public class LocationOntologyTest extends TestCase {
 		LocationOntology lo = new LocationOntology(true);
 		String searchTerm = "Brazil";
 
-		Location location0 = new Location(new LocationType(1, new Label(
-				"Country", "en_AU")), new Label("Brazil", "en_AU"));
-		location0.addLabel(new Label("Brasil", "pt_BR"));
-		location0.addLabel(new Label("Brésil", "fr_FR"));
-
-		lo.addLocation(location0);
-
 		List<Location> result = lo.search(searchTerm);
-		assertEquals(1, result.size());
+		assertEquals(2, result.size());
 	}
 
 }

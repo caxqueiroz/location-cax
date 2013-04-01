@@ -170,6 +170,8 @@ public class InMemDBTest extends TestCase {
 		assertEquals(0, filteredLocations.size());
 
 	}
+	
+	
 	@Test
 	public void testFilter8() {
 		String search = "br";

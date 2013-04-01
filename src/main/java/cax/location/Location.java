@@ -41,7 +41,7 @@ public final class Location {
 		return this.labels.get(0);
 	}
 
-	public void addLabel(Label label) {
+	public synchronized void addLabel(Label label) {
 		if (label != null && !this.labels.contains(label))
 			this.labels.add(label);
 	}
@@ -49,13 +49,25 @@ public final class Location {
 	public List<Label> getLabels() {
 		return this.labels;
 	}
-
-	public boolean contains(Location location) {
-		return containsLocations.contains(location);
+	
+	public synchronized void addContainsLocation(Location location){
+		if(location!=null){
+			this.containsLocations.add(location);
+		}
 	}
-
-	public boolean surrounds(Location location) {
-		return surroundsLocations.contains(location);
+	
+	public synchronized void addSurroundsLocation(Location location){
+		if(location!=null){
+			this.surroundsLocations.add(location);
+		}
+	}
+	
+	public List<Location> surroundsLocations(){
+		return this.surroundsLocations;
+	}
+	
+	public List<Location> containsLocations(){
+		return this.containsLocations;
 	}
 
 	@Override
